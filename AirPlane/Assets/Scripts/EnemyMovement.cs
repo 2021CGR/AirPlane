@@ -15,6 +15,8 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.isGameOver) return;
+
         // 적 이동
         transform.Translate(movementDirection * moveSpeed * Time.deltaTime);
 

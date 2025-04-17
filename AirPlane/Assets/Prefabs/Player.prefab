@@ -198,8 +198,8 @@ MonoBehaviour:
   firePoint: {fileID: 9022921224753995632}
   fireRate: 0.5
   moveSpeed: 4
-  minBounds: {x: -1.1, y: -1.8}
-  maxBounds: {x: 1.1, y: 1.8}
+  minBounds: {x: -3.7, y: -1.8}
+  maxBounds: {x: 3.7, y: 1.8}
 --- !u!114 &-7900069996815605775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +213,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  healthText: {fileID: 0}

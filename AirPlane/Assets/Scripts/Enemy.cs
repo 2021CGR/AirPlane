@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("적이 죽었습니다!");
 
+        // 적 처치 수 증가
+        GameManager.enemyKillCount++;
+
         if (enemyRespawnManager != null)
         {
             enemyRespawnManager.OnEnemyDeath();

@@ -15,6 +15,9 @@ public class LoopingBackground : MonoBehaviour
 
     void Update()
     {
+        // ✅ 게임 오버 시 배경 스크롤 정지
+        if (GameManager.isGameOver) return;
+
         // 배경 1 스크롤
         background1.transform.Translate(Vector3.down * scrollSpeed * Time.deltaTime);
 

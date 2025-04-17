@@ -79,4 +79,4 @@ MonoBehaviour:
   enemyPrefab: {fileID: 5467661976900208844, guid: e549749890502f34dbd61f0f9c1c0a88, type: 3}
   respawnPoint: {fileID: 6650147401540171478}
   respawnDelay: 1
-  maxEnemies: 10
+  maxEnemies: 5
