@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2720374961433951292}
   - component: {fileID: -7806858275251944831}
   - component: {fileID: -7900069996815605775}
+  - component: {fileID: 6088554767686163004}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -198,8 +199,8 @@ MonoBehaviour:
   firePoint: {fileID: 9022921224753995632}
   fireRate: 0.5
   moveSpeed: 4
-  minBounds: {x: -3.7, y: -1.8}
-  maxBounds: {x: 3.7, y: 1.8}
+  minBounds: {x: -3.4, y: -1.8}
+  maxBounds: {x: 3.4, y: 1.8}
 --- !u!114 &-7900069996815605775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +215,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   healthText: {fileID: 0}
+--- !u!114 &6088554767686163004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8523384246802522785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4c28ed9a7c4624abd4519746e57f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalBulletPrefab: {fileID: 4129109638752752696, guid: a7e6fcb927ce9d54faaa179f3ae7946f, type: 3}
+  poweredBulletPrefab: {fileID: 6857762855737618053, guid: 1e977c8f4049b9348876bc859457a39e, type: 3}
+  powerupDuration: 10
+  firePoint: {fileID: 9022921224753995632}
+  fireRate: 0.5
