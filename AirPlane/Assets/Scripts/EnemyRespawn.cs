@@ -4,36 +4,28 @@ using System.Collections;
 public class EnemyRespawn : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public Transform respawnPoint;
-    public float respawnDelay = 3f;
-    public int maxEnemies = 5;
-
-    private int currentEnemyCount = 0;
+    public Transform[] spawnPoints;
+    public float respawnDelay = 1f;
+    public int maxEnemies = 6;
 
     void Start()
     {
-        RespawnEnemy();
+        StartCoroutine(RespawnOnce());
     }
 
-    public void OnEnemyDeath()
+    IEnumerator RespawnOnce()
     {
-        currentEnemyCount = Mathf.Max(0, currentEnemyCount - 1);
-        RespawnEnemy();
-    }
+        int spawnCount = Random.Range(3, maxEnemies + 1); // 3~6 랜덤 생성
+        Debug.Log($"🎮 이번 게임의 적 수: {spawnCount}");
 
-    public void RespawnEnemy()
-    {
-        StartCoroutine(RespawnCoroutine());
-    }
-
-    IEnumerator RespawnCoroutine()
-    {
-        yield return new WaitForSeconds(respawnDelay);
-
-        if (currentEnemyCount < maxEnemies)
+        for (int i = 0; i < spawnCount; i++)
         {
-            GameObject enemy = Instantiate(enemyPrefab, respawnPoint.position, Quaternion.identity);
-            currentEnemyCount++;
+            int index = Random.Range(0, spawnPoints.Length);
+            Transform point = spawnPoints[index];
+
+            GameObject enemy = Instantiate(enemyPrefab, point.position, Quaternion.identity);
+
+            GameManager.totalEnemyCount++; // ✅ 생성 수 기록
 
             Enemy enemyScript = enemy.GetComponent<Enemy>();
             if (enemyScript != null)
@@ -55,9 +47,19 @@ public class EnemyRespawn : MonoBehaviour
                 shooting.zigzagFrequency = preset.zigzagFrequency;
                 shooting.zigzagMagnitude = preset.zigzagMagnitude;
             }
+
+            yield return new WaitForSeconds(respawnDelay);
         }
     }
 }
+
+
+
+
+
+
+
+
 
 
 

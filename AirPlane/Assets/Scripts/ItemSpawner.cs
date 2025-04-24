@@ -54,6 +54,7 @@ public class ItemSpawner_ : MonoBehaviour
                 // 🍎 회복 아이템 생성
                 Instantiate(healthItemPrefab, spawnPos, Quaternion.identity);
             }
+
         }
     }
 }

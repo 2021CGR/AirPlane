@@ -8,8 +8,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log("적 데미지: " + damage + ", 현재 체력: " + health);
-
         if (health <= 0)
         {
             Die();
@@ -18,16 +16,10 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("적이 죽었습니다!");
-
-        // 적 처치 수 증가
-        GameManager.enemyKillCount++;
-
-        if (enemyRespawnManager != null)
-        {
-            enemyRespawnManager.OnEnemyDeath();
-        }
+        Debug.Log("💥 적 사망");
+        GameManager.enemyKillCount++; // ✅ 적 사망 시 카운트 증가
 
         Destroy(gameObject);
     }
 }
+

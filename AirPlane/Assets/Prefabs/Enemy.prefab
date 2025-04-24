@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 6
-  enemyRespawnManager: {fileID: 0}
+  enemyRespawnManager: {fileID: 4628810353957216203, guid: 346c46d14d621784580454dbe081a90d, type: 3}
 --- !u!114 &3797811556231699934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,12 +237,12 @@ MonoBehaviour:
   shotType: 0
   bulletPrefab: {fileID: 2887113160837223580, guid: 6cb39d722381f2a40a346314db37d8ba, type: 3}
   firePoint: {fileID: 1004394383019925621}
+  bulletCount: 8
   fireRate: 1
   bulletSpeed: 5
-  bulletCount: 8
   angleStep: 20
   rotateSpeed: 25
+  burstDelay: 0.1
   zigzagFrequency: 5
   zigzagMagnitude: 1
-  burstDelay: 0.1
   playerTarget: {fileID: 0}
