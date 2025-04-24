@@ -234,15 +234,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acc65ec0c25c0340a7492234301dad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotType: 2
+  shotType: 0
   bulletPrefab: {fileID: 2887113160837223580, guid: 6cb39d722381f2a40a346314db37d8ba, type: 3}
   firePoint: {fileID: 1004394383019925621}
-  fireRate: 0.5
-  bulletSpeed: 3
-  bulletCount: 5
-  angleStep: 15
-  rotateSpeed: 30
+  fireRate: 1
+  bulletSpeed: 5
+  bulletCount: 8
+  angleStep: 20
+  rotateSpeed: 25
   zigzagFrequency: 5
-  zigzagMagnitude: 0.5
+  zigzagMagnitude: 1
   burstDelay: 0.1
   playerTarget: {fileID: 0}

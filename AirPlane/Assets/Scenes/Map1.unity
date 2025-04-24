@@ -1493,7 +1493,7 @@ PrefabInstance:
     - target: {fileID: 4628810353957216203, guid: 346c46d14d621784580454dbe081a90d, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5467661976900208844, guid: e549749890502f34dbd61f0f9c1c0a88, type: 3}
     - target: {fileID: 4727770129840277840, guid: 346c46d14d621784580454dbe081a90d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7761357
